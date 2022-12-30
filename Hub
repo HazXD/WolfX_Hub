@@ -1,0 +1,20 @@
+if game.PlaceId == 2753915549
+Local Hub = loadstring(game:HttpGet(('https://raw.githubusercontent.com/HazXD/WolfX_Hub/main/Source')))()
+local Window = Hub:MakeWindow({Name = "Wolf X", HidePremium = false, SaveConfig = true, ConfigFolder = "WolfX"})
+
+local Tab = Window:MakeTab({
+	Name = "AutoFarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddToggle({
+	Name = "Auto Farm Level",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+end
+Hub:Init()

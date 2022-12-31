@@ -1,20 +1,67 @@
-if game.PlaceId == 2753915549
-Local Hub = loadstring(game:HttpGet(('https://raw.githubusercontent.com/HazXD/WolfX_Hub/main/Source')))()
-local Window = Hub:MakeWindow({Name = "Wolf X", HidePremium = false, SaveConfig = true, ConfigFolder = "WolfX"})
+local PlaceId = game.PlaceId
+if PlaceId == 2753915549 or PlaceId == 4442272183 or PlaceId == 7449423635 then
+local Template = loadstring(game:HttpGet(('https://raw.githubusercontent.com/HazXD/WolfX_Hub/main/Source')))()
+local Window = Template:MakeWindow({Name = "Wolf X Hub | 🎄 🎅[XMAS] Blox Fruits", HidePremium = false, IntroText = "Wolf X", IntroEnabled = false, SaveConfig = true, ConfigFolder = "HubConfig"})
 
-local Tab = Window:MakeTab({
-	Name = "AutoFarm",
+local HomeTab = Window:MakeTab({
+	Name = "Home",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-Tab:AddToggle({
-	Name = "Auto Farm Level",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-	end    
+local PlayerTab = Window:MakeTab({
+	Name = "Local Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local FarmTab = Window:MakeTab({
+	Name = "Farming",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local RaidTab = Window:MakeTab({
+	Name = "Raid",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local PlayersTab = Window:MakeTab({
+	Name = "Players",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local TeleportTab = Window:MakeTab({
+	Name = "Teleport",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local VisualsTab = Window:MakeTab({
+	Name = "Visuals",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local DevilTab = Window:MakeTab({
+	Name = "Devil Fruit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local BuyTab = Window:MakeTab({
+	Name = "Buy Item",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local MiscTab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
 })
 
 end
-Hub:Init()
+Template:Init()

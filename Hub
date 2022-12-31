@@ -3,6 +3,8 @@ if PlaceId == 2753915549 or PlaceId == 4442272183 or PlaceId == 7449423635 then
 local Template = loadstring(game:HttpGet(('https://raw.githubusercontent.com/HazXD/WolfX_Hub/main/Source')))()
 local Window = Template:MakeWindow({Name = "Wolf X Hub | 🎄 🎅[XMAS] Blox Fruits", HidePremium = false, IntroText = "Wolf X", IntroEnabled = false, SaveConfig = true, ConfigFolder = "HubConfig"})
 
+-- Tab
+
 local HomeTab = Window:MakeTab({
 	Name = "Home",
 	Icon = "rbxassetid://4483345998",
@@ -61,6 +63,30 @@ local MiscTab = Window:MakeTab({
 	Name = "Misc",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+
+-- Home
+
+HomeTab:AddLabel("Welcome")
+HomeTab:AddLabel("Last Update: 31/12/2022")
+HomeTab:AddButton({
+	Name = "Join to Discord",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+HomeTab:AddParagraph("Update Logs:","[+] This New Script")
+
+-- Player
+
+local Section = PlayerTab:AddSection({
+	Name = "Humanoid"
+})
+PlayerTab:AddButton({
+	Name = "Fly",
+	Callback = function()
+      		print("button pressed")
+  	end    
 })
 
 end
